@@ -519,7 +519,7 @@ console.log(getAge(new Date("1990-05-15")));
 function compareDates(date1, date2) {
   // Перевірка, чи є вхідні значення об'єктами Date.
   if (
-    typeof date1.getTime === "function" ||
+    typeof date1.getTime === "function" &&
     typeof date2.getTime === "function"
   ) {
     // Порівняння дат і отримання результату порівняння: -1, якщо date1 < date2, 0, якщо date1 === date2, 1, якщо date1 > date2.
@@ -569,7 +569,7 @@ console.log(compareDates(new Date("2023-01-01"), new Date("2022-12-31")));
 function getDaysDifference(startDate, endDate) {
   // Перевірка, чи є вхідні значення об'єктами Date.
   if (
-    typeof startDate.getTime === "function" ||
+    typeof startDate.getTime === "function" &&
     typeof endDate.getTime === "function"
   ) {
     // Отримання часу в мілісекундах для початкової та кінцевої дати.
